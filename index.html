@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NOWFI ARSHAD - Women's Ready-Made Garments Trading Company in Dubai. Elegant fashion collections including casual wear, traditional wear, abayas, and seasonal collections.">
+    <meta name="keywords" content="women's fashion, ready-made garments, Dubai, abayas, dresses, fashion">
+    <meta name="author" content="NOWFI ARSHAD READYMADE GARMENTS TRADING CO. L.L.C">
+    <title>NOWFI ARSHAD - Women's Fashion & Garments | Dubai</title>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon"><i class="fas fa-gem"></i></span>
+                <span class="logo-text">NOWFI ARSHAD</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link" data-scroll>Home</a>
+                <a href="#about" class="nav-link" data-scroll>About Us</a>
+                <a href="#collections" class="nav-link" data-scroll>Collections</a>
+                <a href="#gallery" class="nav-link" data-scroll>Gallery</a>
+                <a href="#contact" class="nav-link" data-scroll>Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">NOWFI ARSHAD</h1>
+            <p class="hero-tagline">Elegant Women's Fashion & Ready-Made Garments in Dubai</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('contact')">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </button>
+                <button class="btn btn-secondary" onclick="window.open('https://wa.me/971586678790?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20women%27s%20fashion%20collections.', '_blank')">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Us
+                </button>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About NOWFI ARSHAD</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-paragraph">
+                        Welcome to <strong>NOWFI ARSHAD READYMADE GARMENTS TRADING CO. L.L.C</strong>, your premier destination for elegant women's fashion and ready-made garments in Dubai. With a passion for quality and style, we bring you carefully curated collections that celebrate modern femininity and timeless elegance.
+                    </p>
+                    <p class="about-paragraph">
+                        Our commitment is to provide fashionable and high-quality women's apparel that meets the diverse needs of our customers. Whether you're looking for casual everyday wear, traditional ensembles, contemporary dresses, or modest fashion, we have something special for every occasion.
+                    </p>
+                    <p class="about-paragraph">
+                        Based in the heart of Dubai's vibrant Al Fahidi district, we pride ourselves on delivering excellent service, trending collections, and reliable customer satisfaction. Your confidence in our brand drives us to maintain the highest standards in fashion and professionalism.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Passion for Fashion</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-star"></i>
+                            <span>Quality Excellence</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-handshake"></i>
+                            <span>Customer First</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Women's Fashion Showcase</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="collections">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Collections</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Explore our curated collections of elegant women's fashion</p>
+            </div>
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <i class="fas fa-shirt"></i>
+                    </div>
+                    <h3>Casual Wear</h3>
+                    <p>Comfortable and stylish everyday fashion for modern women. Perfect for work, shopping, and casual outings.</p>
+                    <a href="#gallery" class="collection-link" data-scroll>Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Traditional Wear</h3>
+                    <p>Celebrate tradition with our exquisite collection of traditional garments. Timeless elegance meets cultural heritage.</p>
+                    <a href="#gallery" class="collection-link" data-scroll>Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <h3>Fashion Dresses</h3>
+                    <p>Contemporary and trendy dress designs for every occasion. From casual to elegant, we have it all.</p>
+                    <a href="#gallery" class="collection-link" data-scroll>Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <i class="fas fa-veil"></i>
+                    </div>
+                    <h3>Abayas & Modest Fashion</h3>
+                    <p>Sophisticated and modest fashion pieces that honor tradition while embracing contemporary style and comfort.</p>
+                    <a href="#gallery" class="collection-link" data-scroll>Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Seasonal Collections</h3>
+                    <p>Fresh designs tailored for each season. Stay ahead of fashion trends with our seasonal offerings.</p>
+                    <a href="#gallery" class="collection-link" data-scroll>Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Fashion Essentials</h3>
+                    <p>Wardrobe staples and essential pieces that form the foundation of elegant style. Versatile and timeless.</p>
+                    <a href="#gallery" class="collection-link" data-scroll>Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Us</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="why-choose-grid">
+                <div class="why-choose-item">
+                    <div class="why-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Quality Women's Fashion</h3>
+                    <p>We carefully select each piece to ensure the highest standards of quality, comfort, and durability in women's apparel.</p>
+                </div>
+
+                <div class="why-choose-item">
+                    <div class="why-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Trend-Focused Collections</h3>
+                    <p>Stay fashionable with our collections that blend current trends with timeless elegance, updated regularly.</p>
+                </div>
+
+                <div class="why-choose-item">
+                    <div class="why-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3>Customer Satisfaction</h3>
+                    <p>Your happiness is our priority. We're committed to providing excellent service and support to all our valued customers.</p>
+                </div>
+
+                <div class="why-choose-item">
+                    <div class="why-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Dubai-Based Business</h3>
+                    <p>Located in the heart of Dubai's historic Al Fahidi district, we bring authentic fashion trading expertise to the region.</p>
+                </div>
+
+                <div class="why-choose-item">
+                    <div class="why-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Professional Service</h3>
+                    <p>Experience professionalism and expertise in every interaction. Our team is dedicated to making your experience seamless.</p>
+                </div>
+
+                <div class="why-choose-item">
+                    <div class="why-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Easy Communication</h3>
+                    <p>Reach us easily via phone, WhatsApp, or Instagram. We're always ready to assist and answer your questions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Gallery</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Visual showcase of our elegant women's fashion collections</p>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery items will have image placeholders -->
+                <!-- In production, replace these with actual high-quality images -->
+                <div class="gallery-item" onclick="openLightbox(0)">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <span>Casual Collection</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(1)">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <span>Traditional Wear</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(2)">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <span>Evening Dresses</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <span>Abayas</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(4)">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <span>Summer Collection</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(5)">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <span>Essentials</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(6)">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <span>Formal Wear</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(7)">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <span>Fashion Forward</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <div class="lightbox-image">
+                <i class="fas fa-image"></i>
+            </div>
+        </div>
+        <a class="lightbox-prev" onclick="changeLightboxImage(-1)">&#10094;</a>
+        <a class="lightbox-next" onclick="changeLightboxImage(1)">&#10095;</a>
+    </div>
+
+    <!-- Instagram Section -->
+    <section class="instagram-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Follow Our Journey</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Stay updated with our latest collections and fashion inspiration</p>
+            </div>
+            <div class="instagram-content">
+                <div class="instagram-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <h3>@nowfi.arshad</h3>
+                <p>Discover our latest fashion collections and style inspirations on Instagram</p>
+                <a href="https://www.instagram.com/nowfi.arshad/" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-instagram"></i> Follow Us on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">We'd love to hear from you. Contact us today!</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Business Name</h4>
+                            <p>NOWFI ARSHAD READYMADE GARMENTS TRADING CO. L.L.C</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Address</h4>
+                            <p>12 60A Street - Al Souq Al Kabeer - Al Fahidi - Dubai, United Arab Emirates</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone / WhatsApp</h4>
+                            <p>
+                                <a href="tel:+971586678790">+971 58 667 8790</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Instagram</h4>
+                            <p>
+                                <a href="https://www.instagram.com/nowfi.arshad/" target="_blank">@nowfi.arshad</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Your phone number">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your inquiry..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                        
+                        <!-- Backend Integration Note -->
+                        <!-- 
+                            NOTE: This is a static website. To process form submissions:
+                            1. Option A: Use a form service (Formspree, Netlify Forms, EmailJS, etc.)
+                            2. Option B: Implement backend API endpoint to handle submissions
+                            3. Add email notification system
+                            4. Store submissions in database
+                            
+                            Current form will show success/error message for demonstration.
+                            Update the JavaScript handleFormSubmit function to integrate with your backend.
+                        -->
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section class="maps-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Find Us on the Map</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="maps-container">
+                <!-- Google Maps Embed -->
+                <!-- Replace GOOGLE_API_KEY with your actual Google Maps API key -->
+                <!-- This is a basic embedded map. For full functionality, use Google Maps API -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.9821869639487!2d55.27825!3d25.263658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b8d5d5d5d5d%3A0x5d5d5d5d5d5d5d5d!2s12%2060A%20St%20-%20Al%20Souq%20Al%20Kabeer%20-%20Al%20Fahidi%20-%20Dubai!5e0!3m2!1sen!2sae!4v1234567890123"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <!-- 
+                    NOTE: The above map embed URL is a generic example.
+                    To ensure accurate location mapping:
+                    1. Get your Google Maps API key from Google Cloud Console
+                    2. Use the coordinates: Latitude 25.263658, Longitude 55.278250
+                    3. Replace the embed URL with the correct location data
+                    4. Or implement Google Maps API for dynamic mapping and directions
+                -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>NOWFI ARSHAD</h4>
+                    <p>Women's Ready-Made Garments Trading Company</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" class="footer-link" data-scroll>Home</a></li>
+                        <li><a href="#about" class="footer-link" data-scroll>About Us</a></li>
+                        <li><a href="#collections" class="footer-link" data-scroll>Collections</a></li>
+                        <li><a href="#gallery" class="footer-link" data-scroll>Gallery</a></li>
+                        <li><a href="#contact" class="footer-link" data-scroll>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><strong>Address:</strong> 12 60A Street - Al Souq Al Kabeer - Al Fahidi - Dubai</p>
+                    <p><strong>Phone:</strong> <a href="tel:+971586678790">+971 58 667 8790</a></p>
+                    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/nowfi.arshad/" target="_blank">@nowfi.arshad</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/nowfi.arshad/" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/971586678790" target="_blank" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NOWFI ARSHAD READYMADE GARMENTS TRADING CO. L.L.C. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-floating-button">
+        <a href="https://wa.me/971586678790?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20women%27s%20fashion%20collections." target="_blank" title="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
