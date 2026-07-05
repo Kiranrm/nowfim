@@ -110,6 +110,7 @@ function changeLightboxImage(n) {
 
 function updateLightboxImage() {
     const lightboxImage = document.querySelector('.lightbox-image');
+    const imageFiles = ['2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png'];
     const galleryLabels = [
         'Casual Collection',
         'Traditional Wear',
@@ -122,11 +123,7 @@ function updateLightboxImage() {
     ];
     
     lightboxImage.innerHTML = `
-        <div style="text-align: center;">
-            <i class="fas fa-image" style="font-size: 4rem; margin-bottom: 20px;"></i>
-            <p style="color: #999; font-size: 1.1rem; margin-top: 10px;">${galleryLabels[currentImageIndex]}</p>
-            <p style="color: #666; font-size: 0.9rem; margin-top: 5px;">${currentImageIndex + 1} / ${galleryItems}</p>
-        </div>
+        <img src="./${imageFiles[currentImageIndex]}" alt="${galleryLabels[currentImageIndex]}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;">
     `;
 }
 
@@ -246,23 +243,53 @@ contactForm.addEventListener('submit', (e) => {
     */
     
     // ========================================
-    // DEMONSTRATION RESPONSE
+    // EmailJS Client-side Send (replace placeholders)
     // ========================================
-    // For now, show success message (no actual sending)
-    // Replace with backend integration above in production
-    
-    showFormMessage('✓ Thank you for your message! We will contact you shortly at ' + phone + '.', 'success');
-    
-    // Clear form
-    contactForm.reset();
-    
-    // Optional: Scroll to form message
-    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    
-    // Clear success message after 5 seconds
-    setTimeout(() => {
-        formMessage.style.display = 'none';
-    }, 5000);
+    // Configure these with values from your EmailJS account:
+    const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';    // e.g. 'service_xxx'
+    const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_xxx'
+    const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';    // e.g. 'user_xxx' or public key
+
+    // Check EmailJS availability
+    if (window.emailjs) {
+        // Guard: ensure user replaced placeholders
+        if (EMAILJS_SERVICE_ID.startsWith('YOUR_') || EMAILJS_TEMPLATE_ID.startsWith('YOUR_') || EMAILJS_PUBLIC_KEY.startsWith('YOUR_')) {
+            showFormMessage('Email sending not configured. Please add EmailJS IDs in script.js', 'error');
+            return;
+        }
+
+        // Initialize EmailJS once
+        if (!window._emailjs_inited) {
+            emailjs.init(EMAILJS_PUBLIC_KEY);
+            window._emailjs_inited = true;
+        }
+
+        // Show temporary sending state
+        showFormMessage('Sending message...', 'success');
+
+        // Prepare template parameters (keys must match your EmailJS template variables)
+        const templateParams = {
+            from_name: name,
+            phone: phone,
+            from_email: email,
+            message: message,
+            website: 'nowfiarshad.com'
+        };
+
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then((response) => {
+            showFormMessage('✓ Message sent successfully! We will contact you soon.', 'success');
+            contactForm.reset();
+            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            setTimeout(() => { formMessage.style.display = 'none'; }, 5000);
+        }, (error) => {
+            console.error('EmailJS error:', error);
+            showFormMessage('Error sending message. Please try again later.', 'error');
+        });
+
+    } else {
+        showFormMessage('Email service unavailable. Please check configuration.', 'error');
+    }
 });
 
 function showFormMessage(message, type) {
