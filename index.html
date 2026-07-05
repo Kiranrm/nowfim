@@ -14,14 +14,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
+    <!-- EmailJS SDK (for client-side email sending) -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-icon"><i class="fas fa-gem"></i></span>
-                <span class="logo-text">NOWFI ARSHAD</span>
+                <img src="./Nowfim_Logo.png" alt="NOWFI ARSHAD logo">
             </div>
             <div class="nav-menu" id="navMenu">
                 <a href="#home" class="nav-link" data-scroll>Home</a>
@@ -90,8 +91,7 @@
                 </div>
                 <div class="about-image">
                     <div class="image-placeholder">
-                        <i class="fas fa-image"></i>
-                        <p>Women's Fashion Showcase</p>
+                        <img src="./1.png" alt="NOWFI ARSHAD Women's Fashion Collection">
                     </div>
                 </div>
             </div>
@@ -235,80 +235,56 @@
                 <!-- Gallery items will have image placeholders -->
                 <!-- In production, replace these with actual high-quality images -->
                 <div class="gallery-item" onclick="openLightbox(0)">
-                    <div class="gallery-image">
-                        <i class="fas fa-image"></i>
-                        <span>Casual Collection</span>
-                    </div>
+                    <img src="./2.png" alt="Casual Collection" class="gallery-image">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(1)">
-                    <div class="gallery-image">
-                        <i class="fas fa-image"></i>
-                        <span>Traditional Wear</span>
-                    </div>
+                    <img src="./3.png" alt="Traditional Wear" class="gallery-image">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(2)">
-                    <div class="gallery-image">
-                        <i class="fas fa-image"></i>
-                        <span>Evening Dresses</span>
-                    </div>
+                    <img src="./4.png" alt="Evening Dresses" class="gallery-image">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(3)">
-                    <div class="gallery-image">
-                        <i class="fas fa-image"></i>
-                        <span>Abayas</span>
-                    </div>
+                    <img src="./5.png" alt="Abayas" class="gallery-image">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(4)">
-                    <div class="gallery-image">
-                        <i class="fas fa-image"></i>
-                        <span>Summer Collection</span>
-                    </div>
+                    <img src="./6.png" alt="Summer Collection" class="gallery-image">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(5)">
-                    <div class="gallery-image">
-                        <i class="fas fa-image"></i>
-                        <span>Essentials</span>
-                    </div>
+                    <img src="./7.png" alt="Essentials" class="gallery-image">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(6)">
-                    <div class="gallery-image">
-                        <i class="fas fa-image"></i>
-                        <span>Formal Wear</span>
-                    </div>
+                    <img src="./8.png" alt="Formal Wear" class="gallery-image">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(7)">
-                    <div class="gallery-image">
-                        <i class="fas fa-image"></i>
-                        <span>Fashion Forward</span>
-                    </div>
+                    <img src="./9.png" alt="Fashion Forward" class="gallery-image">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
@@ -410,6 +386,12 @@
                 <!-- Contact Form -->
                 <div class="contact-form">
                     <h3>Send us a Message</h3>
+                    <!-- To enable direct email delivery to nowfiarshad@gmail.com using EmailJS:
+                         1. Sign up at https://www.emailjs.com/
+                         2. Create a Service (e.g. gmail) and a Template with fields: name, phone, email, message, to_email
+                         3. Copy your Service ID, Template ID and Public Key and paste them into script.js constants
+                         4. The form will send using EmailJS and the message will be delivered to the recipient configured in your template.
+                    -->
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Name *</label>
