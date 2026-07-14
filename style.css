@@ -1124,6 +1124,10 @@ a, button, .nav-link, .collection-card, .gallery-item {
         justify-content: center;
     }
 
+    .instagram-content .btn + .btn {
+        margin-top: 18px;
+    }
+
     .section-title {
         font-size: 2rem;
     }
@@ -1273,4 +1277,18 @@ textarea:focus-visible {
 /* Print optimization */
 @page {
     margin: 0;
+}
+
+/* Mobile-specific: ensure Instagram/Noon buttons are full-width and spaced when stacked */
+@media (max-width: 480px) {
+    .instagram-content .btn {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .instagram-content .btn + .btn {
+        margin-top: 10px;
+    }
 }
