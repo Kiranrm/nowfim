@@ -156,7 +156,8 @@ document.addEventListener('keydown', (event) => {
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
-contactForm.addEventListener('submit', (e) => {
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
     // Get form data
@@ -185,112 +186,15 @@ contactForm.addEventListener('submit', (e) => {
         return;
     }
     
-    // ========================================
-    // BACKEND INTEGRATION NOTE
-    // ========================================
-    // This is a static website. To actually send form data, implement one of:
-    //
-    // Option 1: Use Formspree (Free & Easy)
-    // - Sign up at https://formspree.io/
-    // - Replace form action with your Formspree endpoint
-    // - No backend required
-    //
-    // Option 2: Use Netlify Forms (Free for Netlify hosting)
-    // - Add netlify attribute to form
-    // - Deploy on Netlify
-    //
-    // Option 3: Use EmailJS (Free tier available)
-    // - Sign up at https://www.emailjs.com/
-    // - Add EmailJS SDK and use their API
-    //
-    // Option 4: Implement your own backend
-    // - Create API endpoint (Node.js, Python, PHP, etc.)
-    // - Send POST request to your backend
-    // - Backend processes and sends email
-    //
-    // Example implementation with fetch API:
-    // =========================================
-    /*
-    const formData = {
-        name: name,
-        phone: phone,
-        email: email,
-        message: message,
-        timestamp: new Date().toISOString(),
-        website: 'nowfiarshad.com'
-    };
-    
-    fetch('https://your-backend-api.com/api/contact', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            showFormMessage('Message sent successfully! We will contact you soon.', 'success');
-            contactForm.reset();
-        } else {
-            showFormMessage(data.message || 'Error sending message. Please try again.', 'error');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        showFormMessage('Error sending message. Please try again later.', 'error');
-    });
-    */
-    
-    // ========================================
-    // EmailJS Client-side Send (replace placeholders)
-    // ========================================
-    // Configure these with values from your EmailJS account:
-    const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';    // e.g. 'service_xxx'
-    const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_xxx'
-    const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';    // e.g. 'user_xxx' or public key
+    const subject = `NOWFI ARSHAD Contact Form: ${name}`;
+    const body = `Name: ${encodeURIComponent(name)}%0D%0APhone: ${encodeURIComponent(phone)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0A%0D%0A${encodeURIComponent(message)}`;
+    const mailtoLink = `mailto:contact@nowfim.com?subject=${encodeURIComponent(subject)}&body=${body}`;
 
-    // Check EmailJS availability
-    if (window.emailjs) {
-        // Guard: ensure user replaced placeholders
-        if (EMAILJS_SERVICE_ID.startsWith('YOUR_') || EMAILJS_TEMPLATE_ID.startsWith('YOUR_') || EMAILJS_PUBLIC_KEY.startsWith('YOUR_')) {
-            showFormMessage('Email sending not configured. Please add EmailJS IDs in script.js', 'error');
-            return;
-        }
-
-        // Initialize EmailJS once
-        if (!window._emailjs_inited) {
-            emailjs.init(EMAILJS_PUBLIC_KEY);
-            window._emailjs_inited = true;
-        }
-
-        // Show temporary sending state
-        showFormMessage('Sending message...', 'success');
-
-        // Prepare template parameters (keys must match your EmailJS template variables)
-        const templateParams = {
-            from_name: name,
-            phone: phone,
-            from_email: email,
-            message: message,
-            website: 'nowfiarshad.com'
-        };
-
-        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
-        .then((response) => {
-            showFormMessage('✓ Message sent successfully! We will contact you soon.', 'success');
-            contactForm.reset();
-            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            setTimeout(() => { formMessage.style.display = 'none'; }, 5000);
-        }, (error) => {
-            console.error('EmailJS error:', error);
-            showFormMessage('Error sending message. Please try again later.', 'error');
-        });
-
-    } else {
-        showFormMessage('Email service unavailable. Please check configuration.', 'error');
-    }
+    contactForm.reset();
+    showFormMessage('Your email client will open shortly. Please send the message to complete your enquiry.', 'success');
+    window.location.href = mailtoLink;
 });
+}
 
 function showFormMessage(message, type) {
     formMessage.textContent = message;
